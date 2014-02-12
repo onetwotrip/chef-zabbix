@@ -1,0 +1,5 @@
+# Generted by Chef
+#
+<% node['zabbix']['agent']['user_parameters'].each_pair do |item, command| -%>
+UserParameter=<%= item %>,<%= command %>
+<% end -%>

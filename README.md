@@ -1,4 +1,4 @@
-# chef-zabbix cookbook
+# zabbix cookbook
 
 # Requirements
 
@@ -10,4 +10,4 @@
 
 # Author
 
-Author:: Twiket LTD (<denz@twiket.com>)
+Author:: Denis Barishev (<dennybaa@gmail.com>)
