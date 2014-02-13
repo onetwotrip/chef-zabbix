@@ -24,15 +24,14 @@ It's very simple, the proposed method suggests to configure user parameters and 
 
 Example usage, looks like this:
 
-<pre>
-# Shorewall recipe
 
-include_recipe 'zabbix'
+    # Shorewall recipe
 
-zabbix = node.default['zabbix']['agent']
-zabbix['user_parameters']['shorewall.status'] = 'sudo -n /sbin/shorewall status | grep -q Started ; echo $?'
-zabbix['sudo_commands'] << '/sbin/shorewall status'
-</pre>
+    include_recipe 'zabbix'
+
+    zabbix = node.default['zabbix']['agent']
+    zabbix['user_parameters']['shorewall.status'] = 'sudo -n /sbin/shorewall status | grep -q Started ; echo $?'
+    zabbix['sudo_commands'] << '/sbin/shorewall status'
 
 # Attributes
 
