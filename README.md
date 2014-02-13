@@ -13,7 +13,7 @@ Zabbix agent configuration attributes provide almost the full set of options ava
 
 ## Package installation
 
-Zabbix agent is fetched from the official zabbix repository for debian/ubuntu. The latest version of agent currently is **2.0.10** the. Recipe uses version pining to stick to a particular version once it's been installed or upgraded. Specifically during the fresh installation if version specified by `:pin_version` attribute doesn't exist, no pinning will take place.
+Zabbix agent is fetched from the official zabbix repository for debian/ubuntu. The latest version of agent currently is **2.0.10** there. Recipe uses version pining to stick to a particular version once it's been installed or upgraded. Specifically during a fresh installation if version specified by `:pin_version` attribute doesn't exist, no pinning will take place.
 
 ## Using user parameters and sudo
 
