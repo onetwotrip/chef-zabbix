@@ -31,7 +31,9 @@ LogRemoteCommands=1
 
 Server=<%= zabbix[:servers].join(',').to_s %>
 ListenPort=<%= zabbix[:listen_port] %>
+<% if zabbix[:listen_ip] -%>
 ListenIP=<%= zabbix[:listen_ip] %>
+<% end -%>
 <% if zabbix[:start_agents] -%>
 StartAgents=<%= zabbix[:start_agents] %>
 <% end -%>

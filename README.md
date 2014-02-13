@@ -43,7 +43,7 @@ Example usage, looks like this:
 - **:servers** - set to specify zabbix servers list. Default is `[]`.
 - **:servers_active** - set to specify zabbix servers list for active checks. Can contain not only IPs but IP:PORT elements. Default is `[]`.
 - **:listen_port** - agent listen port. Default is `10050`.
-- **:listen_ip** - agent listen ip. Default is `'::'`.
+- **:listen_ip** - agent listen ip. *No default*.
 - **:pid_file** - pid file path.
 - **:log_file** - log file path.
 - **:log_file_size** - log file size in MB. *No default*.

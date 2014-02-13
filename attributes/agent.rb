@@ -8,7 +8,7 @@ zabbix[:servers]        = []  # ip list
 zabbix[:servers_active] = []  # ip || ip:port listRUBY_TO_INSTALL
 
 zabbix[:listen_port]    = 10050
-zabbix[:listen_ip]      = '::'
+zabbix[:listen_ip]      = nil
 zabbix[:pid_file]       = '/var/run/zabbix/zabbix_agentd.pid'
 zabbix[:log_file]       = '/var/log/zabbix/zabbix_agentd.log'
 zabbix[:log_file_size]  = nil
