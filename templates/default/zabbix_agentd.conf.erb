@@ -39,7 +39,7 @@ StartAgents=<%= zabbix[:start_agents] %>
 ##### Active checks related
 
 <% if not zabbix[:servers_active].empty? -%>
-Server=<%= zabbix[:servers_active].join(',') %>
+ServerActive=<%= zabbix[:servers_active].join(',') %>
 <% end -%>
 Hostname=<%= zabbix[:hostname] or node[:hostname] %>
 <% if zabbix[:refresh_active_checks] -%>
