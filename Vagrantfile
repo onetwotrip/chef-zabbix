@@ -3,15 +3,13 @@
 
 chef_run_list =  [
   "recipe[apt]",
-  "recipe[zabbix::default]",
-  "recipe[twiket-utils]"
+  "recipe[zabbix::default]"
 ]
 
 Vagrant.configure("2") do |config|
   config.vm.hostname = "chef-zabbix-berkshelf"
-  #config.vm.box      = "opscode-ubuntu-10.04"
-  config.vm.box      =  "lucid64-rvm-chef11"
-  config.vm.box_url  = "http://opscode-vagrant-boxes.s3.amazonaws.com/ubuntu10.04-gems.box"
+  config.vm.box      = "opscode-ubuntu-10.04"
+  config.vm.box_url  = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-10.04_chef-provisionerless.box"
   config.vm.network :private_network, ip: "33.33.33.10"
 
   # Share an additional folder to the guest VM. The first argument is
@@ -26,7 +24,7 @@ Vagrant.configure("2") do |config|
     # vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
-  #config.omnibus.chef_version = '11.8.2'
+  config.omnibus.chef_version = '11.8.2'
   config.berkshelf.enabled = true
 
   config.vm.provision :chef_solo do |chef|
