@@ -17,7 +17,7 @@ when 'debian'
   apt_repository "official-zabbix-repo" do
     uri zbx_uri
     distribution node['lsb']['codename']
-    key 'https://repo.zabbix.com/zabbix-official-repo.key'
+    key 'http://repo.zabbix.com/zabbix-official-repo.key'
     components ["main"]
     action :add
   end
